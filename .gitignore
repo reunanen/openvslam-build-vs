@@ -1,0 +1,14 @@
+/.vs/openvslam/v15
+*.vcxproj.user
+*.bak
+*.log
+*.pdb
+*.obj
+*.lib
+*.tlog
+*.dll
+*.ilk
+*.exe
+*.exp
+/3rd/include/opencv2/features2d/features2d.hpp
+map.msg

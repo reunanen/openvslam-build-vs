@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="glog\src\demangle.cc" />
+    <ClCompile Include="glog\src\logging.cc" />
+    <ClCompile Include="glog\src\raw_logging.cc" />
+    <ClCompile Include="glog\src\signalhandler.cc" />
+    <ClCompile Include="glog\src\symbolize.cc" />
+    <ClCompile Include="glog\src\utilities.cc" />
+    <ClCompile Include="glog\src\vlog_is_on.cc" />
+    <ClCompile Include="glog\src\windows\port.cc">
+      <Filter>windows</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="windows">
+      <UniqueIdentifier>{2e02a14f-5d66-442e-9af8-6120848021ba}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

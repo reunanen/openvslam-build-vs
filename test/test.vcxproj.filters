@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="feature">
+      <UniqueIdentifier>{0066a7d1-aa2c-4968-91d3-43f01235cef3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{26f97b01-18da-4dba-b4f7-61a59679e285}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="match">
+      <UniqueIdentifier>{700f40a5-867e-47fc-8660-2f1a0ac52ed8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="solve">
+      <UniqueIdentifier>{4c9568bb-9b7f-417d-b1c4-05a5f8aa3953}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="helper">
+      <UniqueIdentifier>{e6860aad-38c0-441f-89fe-38e7e39b2da7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gtest">
+      <UniqueIdentifier>{593b95cf-89c3-4349-a2fb-fee12652ad83}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\openvslam\test\openvslam\feature\orb_extractor.cc">
+      <Filter>feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openvslam\test\openvslam\feature\orb_params.cc">
+      <Filter>feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openvslam\test\openvslam\util\fancy_index.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openvslam\test\openvslam\util\random_array.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openvslam\test\openvslam\util\trigonometric.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openvslam\test\openvslam\match\angle_checker.cc">
+      <Filter>match</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openvslam\test\openvslam\match\base.cc">
+      <Filter>match</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openvslam\test\openvslam\solve\essential_solver.cc">
+      <Filter>solve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openvslam\test\openvslam\solve\fundamental_solver.cc">
+      <Filter>solve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openvslam\test\openvslam\solve\homography_solver.cc">
+      <Filter>solve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openvslam\test\openvslam\solve\pnp_solver.cc">
+      <Filter>solve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openvslam\test\helper\bearing_vector.cc">
+      <Filter>helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openvslam\test\helper\keypoint.cc">
+      <Filter>helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\openvslam\test\helper\landmark.cc">
+      <Filter>helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\src\gtest.cc">
+      <Filter>gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\src\gtest_main.cc">
+      <Filter>gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\src\gtest-filepath.cc">
+      <Filter>gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\src\gtest-port.cc">
+      <Filter>gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\src\gtest-test-part.cc">
+      <Filter>gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\src\gtest-typed-test.cc">
+      <Filter>gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\src\gtest-death-test.cc">
+      <Filter>gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\src\gtest-printers.cc">
+      <Filter>gtest</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

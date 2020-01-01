@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5260A4C8-6CDD-3BDB-9AA4-F771D45A99B6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>g2o</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include;g2o;eigen</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include;g2o;eigen</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="g2o\g2o\core\batch_stats.cpp" />
+    <ClCompile Include="g2o\g2o\core\cache.cpp" />
+    <ClCompile Include="g2o\g2o\core\estimate_propagator.cpp" />
+    <ClCompile Include="g2o\g2o\core\factory.cpp" />
+    <ClCompile Include="g2o\g2o\core\hyper_dijkstra.cpp" />
+    <ClCompile Include="g2o\g2o\core\hyper_graph.cpp" />
+    <ClCompile Include="g2o\g2o\core\hyper_graph_action.cpp" />
+    <ClCompile Include="g2o\g2o\core\jacobian_workspace.cpp" />
+    <ClCompile Include="g2o\g2o\core\marginal_covariance_cholesky.cpp" />
+    <ClCompile Include="g2o\g2o\core\matrix_structure.cpp" />
+    <ClCompile Include="g2o\g2o\core\optimizable_graph.cpp" />
+    <ClCompile Include="g2o\g2o\core\optimization_algorithm.cpp" />
+    <ClCompile Include="g2o\g2o\core\optimization_algorithm_dogleg.cpp" />
+    <ClCompile Include="g2o\g2o\core\optimization_algorithm_factory.cpp" />
+    <ClCompile Include="g2o\g2o\core\optimization_algorithm_gauss_newton.cpp" />
+    <ClCompile Include="g2o\g2o\core\optimization_algorithm_levenberg.cpp" />
+    <ClCompile Include="g2o\g2o\core\optimization_algorithm_with_hessian.cpp" />
+    <ClCompile Include="g2o\g2o\core\parameter.cpp" />
+    <ClCompile Include="g2o\g2o\core\parameter_container.cpp" />
+    <ClCompile Include="g2o\g2o\core\robust_kernel.cpp" />
+    <ClCompile Include="g2o\g2o\core\robust_kernel_factory.cpp" />
+    <ClCompile Include="g2o\g2o\core\robust_kernel_impl.cpp" />
+    <ClCompile Include="g2o\g2o\core\solver.cpp" />
+    <ClCompile Include="g2o\g2o\core\sparse_optimizer.cpp" />
+    <ClCompile Include="g2o\g2o\core\sparse_optimizer_terminate_action.cpp" />
+    <ClCompile Include="g2o\g2o\solvers\csparse\csparse_extension.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">include;g2o;eigen;suitesparse-metis-for-windows\SuiteSparse\CXSparse_newfiles\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">include;g2o;eigen;suitesparse-metis-for-windows\SuiteSparse\CXSparse_newfiles\Include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\solvers\csparse\csparse_helper.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">include;g2o;eigen;suitesparse-metis-for-windows\SuiteSparse\CXSparse_newfiles\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">include;g2o;eigen;suitesparse-metis-for-windows\SuiteSparse\CXSparse_newfiles\Include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\solvers\csparse\solver_csparse.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">include;g2o;eigen;suitesparse-metis-for-windows\SuiteSparse\CXSparse_newfiles\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">include;g2o;eigen;suitesparse-metis-for-windows\SuiteSparse\CXSparse_newfiles\Include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\stuff\command_args.cpp" />
+    <ClCompile Include="g2o\g2o\stuff\filesys_tools.cpp" />
+    <ClCompile Include="g2o\g2o\stuff\os_specific.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WINDOWS;_WINDOWS</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WINDOWS;_WINDOWS</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\stuff\property.cpp" />
+    <ClCompile Include="g2o\g2o\stuff\sampler.cpp" />
+    <ClCompile Include="g2o\g2o\stuff\sparse_helper.cpp" />
+    <ClCompile Include="g2o\g2o\stuff\string_tools.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">WINDOWS;_WINDOWS</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">WINDOWS;_WINDOWS</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\stuff\tictoc.cpp" />
+    <ClCompile Include="g2o\g2o\stuff\timeutil.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

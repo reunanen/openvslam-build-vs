@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="g2o\g2o\solvers\csparse\csparse_extension.cpp">
+      <Filter>csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\solvers\csparse\csparse_helper.cpp">
+      <Filter>csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\solvers\csparse\solver_csparse.cpp">
+      <Filter>csparse</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\batch_stats.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\cache.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\estimate_propagator.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\factory.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\hyper_dijkstra.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\hyper_graph.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\hyper_graph_action.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\jacobian_workspace.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\marginal_covariance_cholesky.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\matrix_structure.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\optimizable_graph.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\optimization_algorithm.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\optimization_algorithm_dogleg.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\optimization_algorithm_factory.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\optimization_algorithm_gauss_newton.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\optimization_algorithm_levenberg.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\optimization_algorithm_with_hessian.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\parameter.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\parameter_container.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\robust_kernel.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\robust_kernel_factory.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\robust_kernel_impl.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\solver.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\sparse_optimizer.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\core\sparse_optimizer_terminate_action.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\stuff\command_args.cpp">
+      <Filter>stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\stuff\filesys_tools.cpp">
+      <Filter>stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\stuff\property.cpp">
+      <Filter>stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\stuff\sampler.cpp">
+      <Filter>stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\stuff\sparse_helper.cpp">
+      <Filter>stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\stuff\tictoc.cpp">
+      <Filter>stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\stuff\timeutil.cpp">
+      <Filter>stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\stuff\string_tools.cpp">
+      <Filter>stuff</Filter>
+    </ClCompile>
+    <ClCompile Include="g2o\g2o\stuff\os_specific.c">
+      <Filter>stuff</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="csparse">
+      <UniqueIdentifier>{1150adb7-b0f3-4a0f-811a-ef5c6e4507a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stuff">
+      <UniqueIdentifier>{ff870051-59a5-4b58-b483-d25b1fa93af4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{d7500d87-e623-4d66-a976-9c09199b750a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

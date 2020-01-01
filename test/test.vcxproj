@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\src\gtest-death-test.cc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\include;..\3rd\yaml-cpp\test\gtest-1.8.0\googletest</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\include;..\3rd\yaml-cpp\test\gtest-1.8.0\googletest</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\src\gtest-filepath.cc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\include;..\3rd\yaml-cpp\test\gtest-1.8.0\googletest</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\include;..\3rd\yaml-cpp\test\gtest-1.8.0\googletest</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\src\gtest-port.cc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\include;..\3rd\yaml-cpp\test\gtest-1.8.0\googletest</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\include;..\3rd\yaml-cpp\test\gtest-1.8.0\googletest</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\src\gtest-printers.cc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\include;..\3rd\yaml-cpp\test\gtest-1.8.0\googletest</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\include;..\3rd\yaml-cpp\test\gtest-1.8.0\googletest</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\src\gtest-test-part.cc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\include;..\3rd\yaml-cpp\test\gtest-1.8.0\googletest</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\include;..\3rd\yaml-cpp\test\gtest-1.8.0\googletest</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\src\gtest-typed-test.cc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\include;..\3rd\yaml-cpp\test\gtest-1.8.0\googletest</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\include;..\3rd\yaml-cpp\test\gtest-1.8.0\googletest</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\src\gtest.cc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\include;..\3rd\yaml-cpp\test\gtest-1.8.0\googletest</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\include;..\3rd\yaml-cpp\test\gtest-1.8.0\googletest</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\src\gtest_main.cc" />
+    <ClCompile Include="..\openvslam\test\helper\bearing_vector.cc" />
+    <ClCompile Include="..\openvslam\test\helper\keypoint.cc" />
+    <ClCompile Include="..\openvslam\test\helper\landmark.cc" />
+    <ClCompile Include="..\openvslam\test\openvslam\feature\orb_extractor.cc" />
+    <ClCompile Include="..\openvslam\test\openvslam\feature\orb_params.cc" />
+    <ClCompile Include="..\openvslam\test\openvslam\match\angle_checker.cc" />
+    <ClCompile Include="..\openvslam\test\openvslam\match\base.cc" />
+    <ClCompile Include="..\openvslam\test\openvslam\solve\essential_solver.cc" />
+    <ClCompile Include="..\openvslam\test\openvslam\solve\fundamental_solver.cc" />
+    <ClCompile Include="..\openvslam\test\openvslam\solve\homography_solver.cc" />
+    <ClCompile Include="..\openvslam\test\openvslam\solve\pnp_solver.cc" />
+    <ClCompile Include="..\openvslam\test\openvslam\util\fancy_index.cc" />
+    <ClCompile Include="..\openvslam\test\openvslam\util\random_array.cc" />
+    <ClCompile Include="..\openvslam\test\openvslam\util\trigonometric.cc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{046B2054-A109-429D-91C2-7F56F9010D97}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>test</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\openvslam\test;..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\include;..\openvslam\src;..\3rd\include;openvslam\..\3rd\spdlog\include;..\3rd\eigen;..\3rd\g2o;..\3rd\opencv-build-vs\include;..\3rd\yaml-cpp\include;..\openvslam\3rd\json\include;..\3rd\DBoW2\include;openvslam\..\3rd\popl\include;..\3rd\Pangolin\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>USE_PANGOLIN_VIEWER;USE_DBOW2;TEST_DATA_DIR="../openvslam/test/data"</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>openvslam.lib;opencv.lib;DBoW2.lib;yaml-cpp.lib;g2o.lib;cxsparse.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>$(OutDir)test.exe</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\openvslam\test;..\3rd\yaml-cpp\test\gtest-1.8.0\googletest\include;..\openvslam\src;..\3rd\include;openvslam\..\3rd\spdlog\include;..\3rd\eigen;..\3rd\g2o;..\3rd\opencv-build-vs\include;..\3rd\yaml-cpp\include;..\openvslam\3rd\json\include;..\3rd\DBoW2\include;openvslam\..\3rd\popl\include;..\3rd\Pangolin\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>USE_PANGOLIN_VIEWER;USE_DBOW2;TEST_DATA_DIR="../openvslam/test/data"</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>openvslam.lib;opencv.lib;DBoW2.lib;yaml-cpp.lib;g2o.lib;cxsparse.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>$(OutDir)test.exe</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

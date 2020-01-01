@@ -1,0 +1,33 @@
+[submodule "openvslam"]
+	path = openvslam
+	url = https://github.com/reunanen/openvslam.git
+[submodule "3rd/eigen"]
+	path = 3rd/eigen
+	url = https://gitlab.com/libeigen/eigen.git
+[submodule "3rd/suitesparse-metis-for-windows"]
+	path = 3rd/suitesparse-metis-for-windows
+	url = https://github.com/jlblancoc/suitesparse-metis-for-windows.git
+[submodule "3rd/DBoW2"]
+	path = 3rd/DBoW2
+	url = https://github.com/shinsumicco/DBoW2.git
+[submodule "3rd/yaml-cpp"]
+	path = 3rd/yaml-cpp
+	url = https://github.com/jbeder/yaml-cpp.git
+[submodule "3rd/opencv-build-vs"]
+	path = 3rd/opencv-build-vs
+	url = https://github.com/reunanen/opencv-build-vs
+[submodule "3rd/Pangolin"]
+	path = 3rd/Pangolin
+	url = https://github.com/stevenlovegrove/Pangolin.git
+[submodule "3rd/glog"]
+	path = 3rd/glog
+	url = https://github.com/google/glog.git
+[submodule "3rd/gflags"]
+	path = 3rd/gflags
+	url = https://github.com/gflags/gflags.git
+[submodule "3rd/g2o"]
+	path = 3rd/g2o
+	url = https://github.com/RainerKuemmerle/g2o.git
+[submodule "3rd/dirent"]
+	path = 3rd/dirent
+	url = https://github.com/tronkko/dirent

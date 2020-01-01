@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7AACF226-EA55-39D6-8AF2-57C50FDFA0C2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>openvslam</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>openvslam\src;openvslam\3rd\spdlog\include;3rd\include;3rd\eigen;3rd\opencv-build-vs\include;3rd\yaml-cpp\include;openvslam\3rd\json\include;3rd\DBoW2\include;3rd\g2o;3rd\suitesparse-metis-for-windows\SuiteSparse\CXSparse_newfiles\Include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDLL;USE_DBOW2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4267</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opencv.lib;DBoW2.lib;yaml-cpp.lib;g2o.lib;cxsparse.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /y 3rd\opencv-build-vs\vs\3rdparty\ffmpeg\opencv_ffmpeg_64.dll $(OutDir)opencv_ffmpeg401_64.dll
+copy /y 3rd\glew\glew.dll $(OutDir)</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>xcopy /y /a 3rd\opencv-build-vs\include\opencv2\features2d.hpp 3rd\include\opencv2\features2d\</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>openvslam\src;openvslam\3rd\spdlog\include;3rd\include;3rd\eigen;3rd\opencv-build-vs\include;3rd\yaml-cpp\include;openvslam\3rd\json\include;3rd\DBoW2\include;3rd\g2o;3rd\suitesparse-metis-for-windows\SuiteSparse\CXSparse_newfiles\Include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDLL;USE_DBOW2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4267</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opencv.lib;DBoW2.lib;yaml-cpp.lib;g2o.lib;cxsparse.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /y 3rd\opencv-build-vs\vs\3rdparty\ffmpeg\opencv_ffmpeg_64.dll $(OutDir)opencv_ffmpeg401_64.dll
+copy /y 3rd\glew\glew.dll $(OutDir)</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>xcopy /y /a 3rd\opencv-build-vs\include\opencv2\features2d.hpp 3rd\include\opencv2\features2d\</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="openvslam\src\openvslam\config.h" />
+    <ClInclude Include="openvslam\src\openvslam\match\angle_checker.h" />
+    <ClInclude Include="openvslam\src\openvslam\match\base.h" />
+    <ClInclude Include="openvslam\src\openvslam\module\type.h" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\pose_opt_edge_wrapper.h" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\reproj_edge_wrapper.h" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\sim3\mutual_reproj_edge_wrapper.h" />
+    <ClInclude Include="openvslam\src\openvslam\solve\triangulator.h" />
+    <ClInclude Include="openvslam\src\openvslam\type.h" />
+    <ClInclude Include="openvslam\src\openvslam\system.h" />
+    <ClInclude Include="openvslam\src\openvslam\tracking_module.h" />
+    <ClInclude Include="openvslam\src\openvslam\mapping_module.h" />
+    <ClInclude Include="openvslam\src\openvslam\global_optimization_module.h" />
+    <ClCompile Include="openvslam\src\openvslam\config.cc" />
+    <ClCompile Include="openvslam\src\openvslam\system.cc" />
+    <ClCompile Include="openvslam\src\openvslam\tracking_module.cc" />
+    <ClCompile Include="openvslam\src\openvslam\mapping_module.cc" />
+    <ClCompile Include="openvslam\src\openvslam\global_optimization_module.cc" />
+    <ClInclude Include="openvslam\src\openvslam\camera\base.h" />
+    <ClInclude Include="openvslam\src\openvslam\camera\perspective.h" />
+    <ClInclude Include="openvslam\src\openvslam\camera\fisheye.h" />
+    <ClInclude Include="openvslam\src\openvslam\camera\equirectangular.h" />
+    <ClCompile Include="openvslam\src\openvslam\camera\base.cc">
+      <ObjectFileName>$(IntDir)camera\base.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\camera\perspective.cc">
+      <ObjectFileName>$(IntDir)camera\perspective.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\camera\fisheye.cc" />
+    <ClCompile Include="openvslam\src\openvslam\camera\equirectangular.cc" />
+    <ClInclude Include="openvslam\src\openvslam\data\bow_vocabulary.h" />
+    <ClInclude Include="openvslam\src\openvslam\data\common.h" />
+    <ClInclude Include="openvslam\src\openvslam\data\frame.h" />
+    <ClInclude Include="openvslam\src\openvslam\data\keyframe.h" />
+    <ClInclude Include="openvslam\src\openvslam\data\landmark.h" />
+    <ClInclude Include="openvslam\src\openvslam\data\graph_node.h" />
+    <ClInclude Include="openvslam\src\openvslam\data\camera_database.h" />
+    <ClInclude Include="openvslam\src\openvslam\data\map_database.h" />
+    <ClInclude Include="openvslam\src\openvslam\data\bow_database.h" />
+    <ClInclude Include="openvslam\src\openvslam\data\frame_statistics.h" />
+    <ClCompile Include="openvslam\src\openvslam\data\common.cc">
+      <ObjectFileName>$(IntDir)data\common.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\data\frame.cc" />
+    <ClCompile Include="openvslam\src\openvslam\data\keyframe.cc" />
+    <ClCompile Include="openvslam\src\openvslam\data\landmark.cc" />
+    <ClCompile Include="openvslam\src\openvslam\data\graph_node.cc" />
+    <ClCompile Include="openvslam\src\openvslam\data\camera_database.cc" />
+    <ClCompile Include="openvslam\src\openvslam\data\map_database.cc" />
+    <ClCompile Include="openvslam\src\openvslam\data\bow_database.cc" />
+    <ClCompile Include="openvslam\src\openvslam\data\frame_statistics.cc" />
+    <ClInclude Include="openvslam\src\openvslam\feature\orb_params.h" />
+    <ClInclude Include="openvslam\src\openvslam\feature\orb_extractor.h" />
+    <ClInclude Include="openvslam\src\openvslam\feature\orb_extractor_node.h" />
+    <ClCompile Include="openvslam\src\openvslam\feature\orb_params.cc" />
+    <ClCompile Include="openvslam\src\openvslam\feature\orb_extractor.cc" />
+    <ClCompile Include="openvslam\src\openvslam\feature\orb_extractor_node.cc" />
+    <ClInclude Include="openvslam\src\openvslam\initialize\base.h" />
+    <ClInclude Include="openvslam\src\openvslam\initialize\perspective.h" />
+    <ClInclude Include="openvslam\src\openvslam\initialize\bearing_vector.h" />
+    <ClCompile Include="openvslam\src\openvslam\initialize\base.cc">
+      <ObjectFileName>$(IntDir)initialize\base.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\initialize\perspective.cc">
+      <ObjectFileName>$(IntDir)initialize\perspective.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\initialize\bearing_vector.cc" />
+    <ClInclude Include="openvslam\src\openvslam\io\trajectory_io.h" />
+    <ClInclude Include="openvslam\src\openvslam\io\map_database_io.h" />
+    <ClCompile Include="openvslam\src\openvslam\io\trajectory_io.cc" />
+    <ClCompile Include="openvslam\src\openvslam\io\map_database_io.cc" />
+    <ClInclude Include="openvslam\src\openvslam\match\area.h" />
+    <ClInclude Include="openvslam\src\openvslam\match\bow_tree.h" />
+    <ClInclude Include="openvslam\src\openvslam\match\fuse.h" />
+    <ClInclude Include="openvslam\src\openvslam\match\projection.h" />
+    <ClInclude Include="openvslam\src\openvslam\match\robust.h" />
+    <ClInclude Include="openvslam\src\openvslam\match\stereo.h" />
+    <ClCompile Include="openvslam\src\openvslam\match\area.cc" />
+    <ClCompile Include="openvslam\src\openvslam\match\bow_tree.cc" />
+    <ClCompile Include="openvslam\src\openvslam\match\fuse.cc" />
+    <ClCompile Include="openvslam\src\openvslam\match\projection.cc" />
+    <ClCompile Include="openvslam\src\openvslam\match\robust.cc" />
+    <ClCompile Include="openvslam\src\openvslam\match\stereo.cc" />
+    <ClInclude Include="openvslam\src\openvslam\module\initializer.h" />
+    <ClInclude Include="openvslam\src\openvslam\module\relocalizer.h" />
+    <ClInclude Include="openvslam\src\openvslam\module\frame_tracker.h" />
+    <ClInclude Include="openvslam\src\openvslam\module\keyframe_inserter.h" />
+    <ClInclude Include="openvslam\src\openvslam\module\two_view_triangulator.h" />
+    <ClInclude Include="openvslam\src\openvslam\module\local_map_cleaner.h" />
+    <ClInclude Include="openvslam\src\openvslam\module\loop_detector.h" />
+    <ClInclude Include="openvslam\src\openvslam\module\loop_bundle_adjuster.h" />
+    <ClCompile Include="openvslam\src\openvslam\module\initializer.cc" />
+    <ClCompile Include="openvslam\src\openvslam\module\relocalizer.cc" />
+    <ClCompile Include="openvslam\src\openvslam\module\frame_tracker.cc" />
+    <ClCompile Include="openvslam\src\openvslam\module\keyframe_inserter.cc" />
+    <ClCompile Include="openvslam\src\openvslam\module\two_view_triangulator.cc" />
+    <ClCompile Include="openvslam\src\openvslam\module\local_map_cleaner.cc" />
+    <ClCompile Include="openvslam\src\openvslam\module\loop_detector.cc" />
+    <ClCompile Include="openvslam\src\openvslam\module\loop_bundle_adjuster.cc" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\pose_optimizer.h" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\local_bundle_adjuster.h" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\transform_optimizer.h" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\graph_optimizer.h" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\global_bundle_adjuster.h" />
+    <ClCompile Include="openvslam\src\openvslam\optimize\pose_optimizer.cc" />
+    <ClCompile Include="openvslam\src\openvslam\optimize\local_bundle_adjuster.cc" />
+    <ClCompile Include="openvslam\src\openvslam\optimize\transform_optimizer.cc" />
+    <ClCompile Include="openvslam\src\openvslam\optimize\graph_optimizer.cc" />
+    <ClCompile Include="openvslam\src\openvslam\optimize\global_bundle_adjuster.cc" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\landmark_vertex.h" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\landmark_vertex_container.h" />
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\landmark_vertex.cc" />
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\landmark_vertex_container.cc" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\shot_vertex.h" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\shot_vertex_container.h" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\perspective_pose_opt_edge.h" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\perspective_reproj_edge.h" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\equirectangular_pose_opt_edge.h" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\equirectangular_reproj_edge.h" />
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\shot_vertex.cc">
+      <ObjectFileName>$(IntDir)optimize\g2o\se3\shot_vertex.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\shot_vertex_container.cc" />
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\perspective_pose_opt_edge.cc" />
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\perspective_reproj_edge.cc" />
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\equirectangular_pose_opt_edge.cc" />
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\equirectangular_reproj_edge.cc" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\sim3\shot_vertex.h" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\sim3\graph_opt_edge.h" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\sim3\transform_vertex.h" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\sim3\backward_reproj_edge.h" />
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\sim3\forward_reproj_edge.h" />
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\sim3\shot_vertex.cc">
+      <ObjectFileName>$(IntDir)optimize\g2o\sim3\shot_vertex.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\sim3\graph_opt_edge.cc" />
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\sim3\transform_vertex.cc" />
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\sim3\backward_reproj_edge.cc" />
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\sim3\forward_reproj_edge.cc" />
+    <ClInclude Include="openvslam\src\openvslam\publish\frame_publisher.h" />
+    <ClInclude Include="openvslam\src\openvslam\publish\map_publisher.h" />
+    <ClCompile Include="openvslam\src\openvslam\publish\frame_publisher.cc" />
+    <ClCompile Include="openvslam\src\openvslam\publish\map_publisher.cc" />
+    <ClInclude Include="openvslam\src\openvslam\solve\common.h" />
+    <ClInclude Include="openvslam\src\openvslam\solve\homography_solver.h" />
+    <ClInclude Include="openvslam\src\openvslam\solve\fundamental_solver.h" />
+    <ClInclude Include="openvslam\src\openvslam\solve\essential_solver.h" />
+    <ClInclude Include="openvslam\src\openvslam\solve\pnp_solver.h" />
+    <ClInclude Include="openvslam\src\openvslam\solve\sim3_solver.h" />
+    <ClCompile Include="openvslam\src\openvslam\solve\common.cc">
+      <ObjectFileName>$(IntDir)solve\common.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\solve\homography_solver.cc" />
+    <ClCompile Include="openvslam\src\openvslam\solve\fundamental_solver.cc" />
+    <ClCompile Include="openvslam\src\openvslam\solve\essential_solver.cc" />
+    <ClCompile Include="openvslam\src\openvslam\solve\pnp_solver.cc" />
+    <ClCompile Include="openvslam\src\openvslam\solve\sim3_solver.cc" />
+    <ClInclude Include="openvslam\src\openvslam\util\converter.h" />
+    <ClInclude Include="openvslam\src\openvslam\util\fancy_index.h" />
+    <ClInclude Include="openvslam\src\openvslam\util\image_converter.h" />
+    <ClInclude Include="openvslam\src\openvslam\util\random_array.h" />
+    <ClCompile Include="openvslam\src\openvslam\util\converter.cc" />
+    <ClCompile Include="openvslam\src\openvslam\util\image_converter.cc" />
+    <ClCompile Include="openvslam\src\openvslam\util\random_array.cc" />
+    <ClCompile Include="openvslam\src\openvslam\util\stereo_rectifier.cc" />
+    <ClInclude Include="openvslam\src\openvslam\util\stereo_rectifier.h" />
+    <ClInclude Include="openvslam\src\openvslam\util\trigonometric.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

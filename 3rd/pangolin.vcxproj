@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5C1F33D3-A207-3202-A75F-B951435DCFC3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>pangolin</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>Pangolin\include;include;eigen;opencv-build-vs\opencv\3rdparty\libjpeg;opencv-build-vs\opencv\3rdparty\libpng</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>Pangolin\include;include;eigen;opencv-build-vs\opencv\3rdparty\libjpeg;opencv-build-vs\opencv\3rdparty\libpng</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="include\pangolin\fonts.cpp" />
+    <ClCompile Include="Pangolin\src\utils\file_extension.cpp" />
+    <ClCompile Include="Pangolin\src\utils\file_utils.cpp" />
+    <ClCompile Include="Pangolin\src\utils\sigstate.cpp" />
+    <ClCompile Include="Pangolin\src\utils\threadedfilebuf.cpp" />
+    <ClCompile Include="Pangolin\src\utils\timer.cpp" />
+    <ClCompile Include="Pangolin\src\utils\uri.cpp" />
+    <ClCompile Include="Pangolin\src\image\image_io.cpp" />
+    <ClCompile Include="Pangolin\src\image\image_io_exr.cpp" />
+    <ClCompile Include="Pangolin\src\image\image_io_jpg.cpp" />
+    <ClCompile Include="Pangolin\src\image\image_io_lz4.cpp" />
+    <ClCompile Include="Pangolin\src\image\image_io_packed12bit.cpp" />
+    <ClCompile Include="Pangolin\src\image\image_io_pango.cpp" />
+    <ClCompile Include="Pangolin\src\image\image_io_png.cpp" />
+    <ClCompile Include="Pangolin\src\image\image_io_ppm.cpp" />
+    <ClCompile Include="Pangolin\src\image\image_io_raw.cpp" />
+    <ClCompile Include="Pangolin\src\image\image_io_tga.cpp" />
+    <ClCompile Include="Pangolin\src\image\image_io_zstd.cpp" />
+    <ClCompile Include="Pangolin\src\image\pixel_format.cpp" />
+    <ClCompile Include="Pangolin\src\log\packet.cpp" />
+    <ClCompile Include="Pangolin\src\log\packetstream.cpp" />
+    <ClCompile Include="Pangolin\src\log\packetstream_reader.cpp" />
+    <ClCompile Include="Pangolin\src\log\packetstream_writer.cpp" />
+    <ClCompile Include="Pangolin\src\log\playback_session.cpp" />
+    <ClCompile Include="Pangolin\src\geometry\geometry.cpp" />
+    <ClCompile Include="Pangolin\src\geometry\geometry_obj.cpp" />
+    <ClCompile Include="Pangolin\src\geometry\geometry_ply.cpp" />
+    <ClCompile Include="Pangolin\src\geometry\glgeometry.cpp" />
+    <ClCompile Include="Pangolin\src\geometry\tinyobj.cpp" />
+    <ClCompile Include="Pangolin\src\gl\glchar.cpp" />
+    <ClCompile Include="Pangolin\src\gl\gldraw.cpp" />
+    <ClCompile Include="Pangolin\src\gl\glfont.cpp" />
+    <ClCompile Include="Pangolin\src\gl\glpangoglu.cpp" />
+    <ClCompile Include="Pangolin\src\gl\gltext.cpp" />
+    <ClCompile Include="Pangolin\src\gl\gltexturecache.cpp" />
+    <ClCompile Include="Pangolin\src\display\display.cpp" />
+    <ClCompile Include="Pangolin\src\display\image_view.cpp" />
+    <ClCompile Include="Pangolin\src\display\opengl_render_state.cpp" />
+    <ClCompile Include="Pangolin\src\display\view.cpp" />
+    <ClCompile Include="Pangolin\src\display\viewport.cpp" />
+    <ClCompile Include="Pangolin\src\display\window_factory.cpp" />
+    <ClCompile Include="Pangolin\src\handler\handler.cpp" />
+    <ClCompile Include="Pangolin\src\handler\handler_glbuffer.cpp" />
+    <ClCompile Include="Pangolin\src\handler\handler_image.cpp" />
+    <ClCompile Include="Pangolin\src\plot\datalog.cpp" />
+    <ClCompile Include="Pangolin\src\plot\plotter.cpp" />
+    <ClCompile Include="Pangolin\src\var\input_record_repeat.cpp" />
+    <ClCompile Include="Pangolin\src\var\vars.cpp" />
+    <ClCompile Include="Pangolin\src\display\widgets\widgets.cpp" />
+    <ClCompile Include="Pangolin\src\video\stream_encoder_factory.cpp" />
+    <ClCompile Include="Pangolin\src\video\video.cpp" />
+    <ClCompile Include="Pangolin\src\video\video_input.cpp" />
+    <ClCompile Include="Pangolin\src\video\video_interface_factory.cpp" />
+    <ClCompile Include="Pangolin\src\video\video_output.cpp" />
+    <ClCompile Include="Pangolin\src\video\video_output_interface_factory.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\test.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\images.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\images_out.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\split.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\truncate.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\pvn.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\pango.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\pango_video_output.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\debayer.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\shift.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\mirror.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\unpack.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\pack.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\join.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\merge.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\json.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\thread.cpp" />
+    <ClCompile Include="Pangolin\src\tools\video_viewer.cpp" />
+    <ClCompile Include="Pangolin\src\display\device\display_win.cpp" />
+    <ClCompile Include="Pangolin\src\video\drivers\uvc_mediafoundation.cpp" />
+    <ClInclude Include="Pangolin\include\pangolin\pangolin.h" />
+    <ClInclude Include="Pangolin\include\pangolin\platform.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\argagg.hpp" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\assert.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\compontent_cast.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\file_extension.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\file_utils.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\fix_size_buffer_queue.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\format_string.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\log.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\memstreambuf.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\params.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\parse.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\picojson.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\registration.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\signal_slot.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\sigstate.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\simple_math.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\threadedfilebuf.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\timer.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\transform.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\type_convert.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\uri.h" />
+    <ClInclude Include="Pangolin\include\pangolin\utils\variadic_all.h" />
+    <ClInclude Include="Pangolin\include\pangolin\image\copy.h" />
+    <ClInclude Include="Pangolin\include\pangolin\image\image.h" />
+    <ClInclude Include="Pangolin\include\pangolin\image\image_convert.h" />
+    <ClInclude Include="Pangolin\include\pangolin\image\image_io.h" />
+    <ClInclude Include="Pangolin\include\pangolin\image\image_utils.h" />
+    <ClInclude Include="Pangolin\include\pangolin\image\managed_image.h" />
+    <ClInclude Include="Pangolin\include\pangolin\image\memcpy.h" />
+    <ClInclude Include="Pangolin\include\pangolin\image\pixel_format.h" />
+    <ClInclude Include="Pangolin\include\pangolin\image\typed_image.h" />
+    <ClInclude Include="Pangolin\include\pangolin\log\packet.h" />
+    <ClInclude Include="Pangolin\include\pangolin\log\packetstream.h" />
+    <ClInclude Include="Pangolin\include\pangolin\log\packetstream_reader.h" />
+    <ClInclude Include="Pangolin\include\pangolin\log\packetstream_source.h" />
+    <ClInclude Include="Pangolin\include\pangolin\log\packetstream_tags.h" />
+    <ClInclude Include="Pangolin\include\pangolin\log\packetstream_writer.h" />
+    <ClInclude Include="Pangolin\include\pangolin\log\playback_session.h" />
+    <ClInclude Include="Pangolin\include\pangolin\log\sync_time.h" />
+    <ClInclude Include="Pangolin\include\pangolin\geometry\geometry.h" />
+    <ClInclude Include="Pangolin\include\pangolin\geometry\geometry_obj.h" />
+    <ClInclude Include="Pangolin\include\pangolin\geometry\geometry_ply.h" />
+    <ClInclude Include="Pangolin\include\pangolin\geometry\glgeometry.h" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\cg.h" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\colour.h" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\gl.h" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\gl.hpp" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\glchar.h" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\glcuda.h" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\gldraw.h" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\glfont.h" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\glformattraits.h" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\glinclude.h" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\glpangoglu.h" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\glpixformat.h" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\glplatform.h" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\glsl.h" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\glstate.h" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\gltext.h" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\gltexturecache.h" />
+    <ClInclude Include="Pangolin\include\pangolin\gl\glvbo.h" />
+    <ClInclude Include="Pangolin\include\pangolin\display\attach.h" />
+    <ClInclude Include="Pangolin\include\pangolin\display\display.h" />
+    <ClInclude Include="Pangolin\include\pangolin\display\display_internal.h" />
+    <ClInclude Include="Pangolin\include\pangolin\display\image_view.h" />
+    <ClInclude Include="Pangolin\include\pangolin\display\opengl_render_state.h" />
+    <ClInclude Include="Pangolin\include\pangolin\display\user_app.h" />
+    <ClInclude Include="Pangolin\include\pangolin\display\view.h" />
+    <ClInclude Include="Pangolin\include\pangolin\display\viewport.h" />
+    <ClInclude Include="Pangolin\include\pangolin\display\window.h" />
+    <ClInclude Include="Pangolin\include\pangolin\handler\handler.h" />
+    <ClInclude Include="Pangolin\include\pangolin\handler\handler_enums.h" />
+    <ClInclude Include="Pangolin\include\pangolin\handler\handler_glbuffer.h" />
+    <ClInclude Include="Pangolin\include\pangolin\handler\handler_image.h" />
+    <ClInclude Include="Pangolin\include\pangolin\plot\datalog.h" />
+    <ClInclude Include="Pangolin\include\pangolin\plot\plotter.h" />
+    <ClInclude Include="Pangolin\include\pangolin\plot\range.h" />
+    <ClInclude Include="Pangolin\include\pangolin\var\input_record_repeat.h" />
+    <ClInclude Include="Pangolin\include\pangolin\var\var.h" />
+    <ClInclude Include="Pangolin\include\pangolin\var\varextra.h" />
+    <ClInclude Include="Pangolin\include\pangolin\var\varstate.h" />
+    <ClInclude Include="Pangolin\include\pangolin\var\varvalue.h" />
+    <ClInclude Include="Pangolin\include\pangolin\var\varvaluegeneric.h" />
+    <ClInclude Include="Pangolin\include\pangolin\var\varvaluet.h" />
+    <ClInclude Include="Pangolin\include\pangolin\var\varwrapper.h" />
+    <ClInclude Include="Pangolin\include\pangolin\display\widgets\widgets.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\iostream_operators.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\stream_encoder_factory.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\stream_info.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\video.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\video_exception.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\video_input.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\video_interface.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\video_output.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\video_output_interface.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\video_record_repeat.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\drivers\test.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\drivers\images.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\drivers\images_out.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\drivers\split.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\drivers\truncate.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\drivers\pvn.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\drivers\pango.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\drivers\pango_video_output.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\drivers\debayer.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\drivers\shift.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\drivers\mirror.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\drivers\unpack.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\drivers\pack.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\drivers\join.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\drivers\merge.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\drivers\thread.h" />
+    <ClInclude Include="Pangolin\include\pangolin\tools\video_viewer.h" />
+    <ClInclude Include="Pangolin\include\pangolin\video\drivers\uvc_mediafoundation.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

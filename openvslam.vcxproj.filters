@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="openvslam\src\openvslam\config.cc" />
+    <ClCompile Include="openvslam\src\openvslam\system.cc" />
+    <ClCompile Include="openvslam\src\openvslam\tracking_module.cc" />
+    <ClCompile Include="openvslam\src\openvslam\mapping_module.cc" />
+    <ClCompile Include="openvslam\src\openvslam\global_optimization_module.cc" />
+    <ClCompile Include="openvslam\src\openvslam\camera\base.cc">
+      <Filter>camera</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\camera\equirectangular.cc">
+      <Filter>camera</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\camera\fisheye.cc">
+      <Filter>camera</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\camera\perspective.cc">
+      <Filter>camera</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\data\bow_database.cc">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\data\camera_database.cc">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\data\common.cc">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\data\frame.cc">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\data\frame_statistics.cc">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\data\graph_node.cc">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\data\keyframe.cc">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\data\landmark.cc">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\data\map_database.cc">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\feature\orb_extractor.cc">
+      <Filter>feature</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\feature\orb_extractor_node.cc">
+      <Filter>feature</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\feature\orb_params.cc">
+      <Filter>feature</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\initialize\base.cc">
+      <Filter>initialize</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\initialize\bearing_vector.cc">
+      <Filter>initialize</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\initialize\perspective.cc">
+      <Filter>initialize</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\io\map_database_io.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\io\trajectory_io.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\match\area.cc">
+      <Filter>match</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\match\bow_tree.cc">
+      <Filter>match</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\match\fuse.cc">
+      <Filter>match</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\match\projection.cc">
+      <Filter>match</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\match\robust.cc">
+      <Filter>match</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\match\stereo.cc">
+      <Filter>match</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\module\frame_tracker.cc">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\module\initializer.cc">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\module\keyframe_inserter.cc">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\module\local_map_cleaner.cc">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\module\loop_bundle_adjuster.cc">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\module\loop_detector.cc">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\module\relocalizer.cc">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\module\two_view_triangulator.cc">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\solve\common.cc">
+      <Filter>solve</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\solve\essential_solver.cc">
+      <Filter>solve</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\solve\fundamental_solver.cc">
+      <Filter>solve</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\solve\homography_solver.cc">
+      <Filter>solve</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\solve\pnp_solver.cc">
+      <Filter>solve</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\solve\sim3_solver.cc">
+      <Filter>solve</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\publish\frame_publisher.cc">
+      <Filter>publish</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\publish\map_publisher.cc">
+      <Filter>publish</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\landmark_vertex.cc">
+      <Filter>optimize\g2o</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\landmark_vertex_container.cc">
+      <Filter>optimize\g2o</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\global_bundle_adjuster.cc">
+      <Filter>optimize</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\graph_optimizer.cc">
+      <Filter>optimize</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\local_bundle_adjuster.cc">
+      <Filter>optimize</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\pose_optimizer.cc">
+      <Filter>optimize</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\transform_optimizer.cc">
+      <Filter>optimize</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\util\converter.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\util\image_converter.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\util\random_array.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\util\stereo_rectifier.cc">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\sim3\backward_reproj_edge.cc">
+      <Filter>optimize\g2o\sim3</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\sim3\forward_reproj_edge.cc">
+      <Filter>optimize\g2o\sim3</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\sim3\graph_opt_edge.cc">
+      <Filter>optimize\g2o\sim3</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\sim3\shot_vertex.cc">
+      <Filter>optimize\g2o\sim3</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\sim3\transform_vertex.cc">
+      <Filter>optimize\g2o\sim3</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\equirectangular_pose_opt_edge.cc">
+      <Filter>optimize\g2o\se3</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\equirectangular_reproj_edge.cc">
+      <Filter>optimize\g2o\se3</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\perspective_pose_opt_edge.cc">
+      <Filter>optimize\g2o\se3</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\perspective_reproj_edge.cc">
+      <Filter>optimize\g2o\se3</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\shot_vertex.cc">
+      <Filter>optimize\g2o\se3</Filter>
+    </ClCompile>
+    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\shot_vertex_container.cc">
+      <Filter>optimize\g2o\se3</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="openvslam\src\openvslam\config.h" />
+    <ClInclude Include="openvslam\src\openvslam\system.h" />
+    <ClInclude Include="openvslam\src\openvslam\tracking_module.h" />
+    <ClInclude Include="openvslam\src\openvslam\mapping_module.h" />
+    <ClInclude Include="openvslam\src\openvslam\global_optimization_module.h" />
+    <ClInclude Include="openvslam\src\openvslam\camera\base.h">
+      <Filter>camera</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\camera\equirectangular.h">
+      <Filter>camera</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\camera\fisheye.h">
+      <Filter>camera</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\camera\perspective.h">
+      <Filter>camera</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\data\bow_database.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\data\bow_vocabulary.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\data\camera_database.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\data\common.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\data\frame.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\data\frame_statistics.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\data\graph_node.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\data\keyframe.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\data\landmark.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\data\map_database.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\feature\orb_extractor.h">
+      <Filter>feature</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\feature\orb_extractor_node.h">
+      <Filter>feature</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\feature\orb_params.h">
+      <Filter>feature</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\initialize\base.h">
+      <Filter>initialize</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\initialize\bearing_vector.h">
+      <Filter>initialize</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\initialize\perspective.h">
+      <Filter>initialize</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\io\map_database_io.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\io\trajectory_io.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\match\angle_checker.h">
+      <Filter>match</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\match\base.h">
+      <Filter>match</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\match\area.h">
+      <Filter>match</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\match\bow_tree.h">
+      <Filter>match</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\match\fuse.h">
+      <Filter>match</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\match\projection.h">
+      <Filter>match</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\match\robust.h">
+      <Filter>match</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\match\stereo.h">
+      <Filter>match</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\module\frame_tracker.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\module\initializer.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\module\keyframe_inserter.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\module\local_map_cleaner.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\module\loop_bundle_adjuster.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\module\loop_detector.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\module\relocalizer.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\module\two_view_triangulator.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\solve\common.h">
+      <Filter>solve</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\solve\essential_solver.h">
+      <Filter>solve</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\solve\fundamental_solver.h">
+      <Filter>solve</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\solve\homography_solver.h">
+      <Filter>solve</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\solve\pnp_solver.h">
+      <Filter>solve</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\solve\sim3_solver.h">
+      <Filter>solve</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\solve\triangulator.h">
+      <Filter>solve</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\publish\frame_publisher.h">
+      <Filter>publish</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\publish\map_publisher.h">
+      <Filter>publish</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\landmark_vertex.h">
+      <Filter>optimize\g2o</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\landmark_vertex_container.h">
+      <Filter>optimize\g2o</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\global_bundle_adjuster.h">
+      <Filter>optimize</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\graph_optimizer.h">
+      <Filter>optimize</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\local_bundle_adjuster.h">
+      <Filter>optimize</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\pose_optimizer.h">
+      <Filter>optimize</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\transform_optimizer.h">
+      <Filter>optimize</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\util\converter.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\util\fancy_index.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\util\image_converter.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\util\random_array.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\util\stereo_rectifier.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\util\trigonometric.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\sim3\backward_reproj_edge.h">
+      <Filter>optimize\g2o\sim3</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\sim3\forward_reproj_edge.h">
+      <Filter>optimize\g2o\sim3</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\sim3\graph_opt_edge.h">
+      <Filter>optimize\g2o\sim3</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\sim3\shot_vertex.h">
+      <Filter>optimize\g2o\sim3</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\sim3\transform_vertex.h">
+      <Filter>optimize\g2o\sim3</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\sim3\mutual_reproj_edge_wrapper.h">
+      <Filter>optimize\g2o\sim3</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\equirectangular_pose_opt_edge.h">
+      <Filter>optimize\g2o\se3</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\equirectangular_reproj_edge.h">
+      <Filter>optimize\g2o\se3</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\perspective_pose_opt_edge.h">
+      <Filter>optimize\g2o\se3</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\shot_vertex.h">
+      <Filter>optimize\g2o\se3</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\perspective_reproj_edge.h">
+      <Filter>optimize\g2o\se3</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\shot_vertex_container.h">
+      <Filter>optimize\g2o\se3</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\pose_opt_edge_wrapper.h">
+      <Filter>optimize\g2o\se3</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\reproj_edge_wrapper.h">
+      <Filter>optimize\g2o\se3</Filter>
+    </ClInclude>
+    <ClInclude Include="openvslam\src\openvslam\type.h" />
+    <ClInclude Include="openvslam\src\openvslam\module\type.h">
+      <Filter>module</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="util">
+      <UniqueIdentifier>{ae7182db-b939-40ca-b95b-0394295dc695}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="camera">
+      <UniqueIdentifier>{ef87c723-128d-4743-ad14-c505d56d1769}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data">
+      <UniqueIdentifier>{ffccecac-e04d-453c-b210-9d8c10763e77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="feature">
+      <UniqueIdentifier>{8880f19b-62e4-40c8-ad46-6ae68dc8d7ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="initialize">
+      <UniqueIdentifier>{66efa870-d9a2-4d2d-94f1-1819e7bd6720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io">
+      <UniqueIdentifier>{d6915a7d-cb91-45ed-a38a-113c8e513f41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="match">
+      <UniqueIdentifier>{4700ea2e-4efa-4d5c-825d-04f8a525d392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="module">
+      <UniqueIdentifier>{6ae3113a-60e9-44e9-a2cd-298338cbc9af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="optimize">
+      <UniqueIdentifier>{15c05680-ead2-4d6f-a188-898a57c71db0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="publish">
+      <UniqueIdentifier>{e82ec431-b54a-4d30-8cb7-eb1f1e61ec27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="solve">
+      <UniqueIdentifier>{22a8efb3-8e6a-4308-9c37-d9f719ebb4ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="optimize\g2o">
+      <UniqueIdentifier>{4c85b347-53ab-4cd8-9a19-327cdbc997e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="optimize\g2o\se3">
+      <UniqueIdentifier>{308ddaad-6af8-4e8e-b14e-42523ade0b86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="optimize\g2o\sim3">
+      <UniqueIdentifier>{99a3c968-aae3-4d49-9017-6e16acf0b27c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
