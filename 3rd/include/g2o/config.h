@@ -5,6 +5,7 @@
 /* #undef G2O_HAVE_OPENGL */
 #define G2O_OPENGL_FOUND 1
 #define G2O_OPENMP 1
+#define G2O_LGPL_SHARED_LIBS 1
 
 // available sparse matrix libraries
 #define G2O_HAVE_CHOLMOD 1

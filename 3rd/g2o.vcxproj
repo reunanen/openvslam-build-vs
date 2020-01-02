@@ -82,18 +82,6 @@
     <ClCompile Include="g2o\g2o\core\solver.cpp" />
     <ClCompile Include="g2o\g2o\core\sparse_optimizer.cpp" />
     <ClCompile Include="g2o\g2o\core\sparse_optimizer_terminate_action.cpp" />
-    <ClCompile Include="g2o\g2o\solvers\csparse\csparse_extension.cpp">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">include;g2o;eigen;suitesparse-metis-for-windows\SuiteSparse\CXSparse_newfiles\Include</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">include;g2o;eigen;suitesparse-metis-for-windows\SuiteSparse\CXSparse_newfiles\Include</AdditionalIncludeDirectories>
-    </ClCompile>
-    <ClCompile Include="g2o\g2o\solvers\csparse\csparse_helper.cpp">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">include;g2o;eigen;suitesparse-metis-for-windows\SuiteSparse\CXSparse_newfiles\Include</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">include;g2o;eigen;suitesparse-metis-for-windows\SuiteSparse\CXSparse_newfiles\Include</AdditionalIncludeDirectories>
-    </ClCompile>
-    <ClCompile Include="g2o\g2o\solvers\csparse\solver_csparse.cpp">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">include;g2o;eigen;suitesparse-metis-for-windows\SuiteSparse\CXSparse_newfiles\Include</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">include;g2o;eigen;suitesparse-metis-for-windows\SuiteSparse\CXSparse_newfiles\Include</AdditionalIncludeDirectories>
-    </ClCompile>
     <ClCompile Include="g2o\g2o\stuff\command_args.cpp" />
     <ClCompile Include="g2o\g2o\stuff\filesys_tools.cpp" />
     <ClCompile Include="g2o\g2o\stuff\os_specific.c">

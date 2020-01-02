@@ -47,7 +47,7 @@
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>openvslam.lib;opencv.lib;DBoW2.lib;yaml-cpp.lib;g2o.lib;cxsparse.lib;pangolin.lib;pangolin_viewer.lib;..\3rd\glew\glew.lib;opengl32.lib;Mf.lib;Mfplat.lib;Mfreadwrite.lib;Mfuuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>openvslam.lib;opencv.lib;DBoW2.lib;yaml-cpp.lib;g2o.lib;g2o_csparse_extension.lib;cxsparse.lib;pangolin.lib;pangolin_viewer.lib;..\3rd\glew\glew.lib;opengl32.lib;Mf.lib;Mfplat.lib;Mfreadwrite.lib;Mfuuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
     </Link>
@@ -60,7 +60,7 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>openvslam.lib;opencv.lib;DBoW2.lib;yaml-cpp.lib;g2o.lib;cxsparse.lib;pangolin.lib;pangolin_viewer.lib;..\3rd\glew\glew.lib;opengl32.lib;Mf.lib;Mfplat.lib;Mfreadwrite.lib;Mfuuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>openvslam.lib;opencv.lib;DBoW2.lib;yaml-cpp.lib;g2o.lib;g2o_csparse_extension.lib;cxsparse.lib;pangolin.lib;pangolin_viewer.lib;..\3rd\glew\glew.lib;opengl32.lib;Mf.lib;Mfplat.lib;Mfreadwrite.lib;Mfuuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
     </Link>

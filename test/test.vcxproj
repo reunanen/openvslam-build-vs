@@ -94,7 +94,7 @@
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>openvslam.lib;opencv.lib;DBoW2.lib;yaml-cpp.lib;g2o.lib;cxsparse.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>openvslam.lib;opencv.lib;DBoW2.lib;yaml-cpp.lib;g2o.lib;g2o_csparse_extension.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -110,7 +110,7 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>openvslam.lib;opencv.lib;DBoW2.lib;yaml-cpp.lib;g2o.lib;cxsparse.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>openvslam.lib;opencv.lib;DBoW2.lib;yaml-cpp.lib;g2o.lib;g2o_csparse_extension.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
