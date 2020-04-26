@@ -48,6 +48,7 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <Optimization>Disabled</Optimization>
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <AdditionalOptions>/bigobj</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>opencv.lib;DBoW2.lib;yaml-cpp.lib;g2o.lib;cxsparse.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -69,6 +70,7 @@ copy /y 3rd\glew\glew.dll $(OutDir)</Command>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalOptions>/bigobj</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>opencv.lib;DBoW2.lib;yaml-cpp.lib;g2o.lib;cxsparse.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -83,9 +85,11 @@ copy /y 3rd\glew\glew.dll $(OutDir)</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="openvslam\src\openvslam\camera\radial_division.h" />
     <ClInclude Include="openvslam\src\openvslam\config.h" />
     <ClInclude Include="openvslam\src\openvslam\match\angle_checker.h" />
     <ClInclude Include="openvslam\src\openvslam\match\base.h" />
+    <ClInclude Include="openvslam\src\openvslam\module\local_map_updater.h" />
     <ClInclude Include="openvslam\src\openvslam\module\type.h" />
     <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\pose_opt_edge_wrapper.h" />
     <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\reproj_edge_wrapper.h" />
@@ -96,7 +100,9 @@ copy /y 3rd\glew\glew.dll $(OutDir)</Command>
     <ClInclude Include="openvslam\src\openvslam\tracking_module.h" />
     <ClInclude Include="openvslam\src\openvslam\mapping_module.h" />
     <ClInclude Include="openvslam\src\openvslam\global_optimization_module.h" />
+    <ClCompile Include="openvslam\src\openvslam\camera\radial_division.cc" />
     <ClCompile Include="openvslam\src\openvslam\config.cc" />
+    <ClCompile Include="openvslam\src\openvslam\module\local_map_updater.cc" />
     <ClCompile Include="openvslam\src\openvslam\system.cc" />
     <ClCompile Include="openvslam\src\openvslam\tracking_module.cc" />
     <ClCompile Include="openvslam\src\openvslam\mapping_module.cc" />
@@ -192,36 +198,6 @@ copy /y 3rd\glew\glew.dll $(OutDir)</Command>
     <ClCompile Include="openvslam\src\openvslam\optimize\transform_optimizer.cc" />
     <ClCompile Include="openvslam\src\openvslam\optimize\graph_optimizer.cc" />
     <ClCompile Include="openvslam\src\openvslam\optimize\global_bundle_adjuster.cc" />
-    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\landmark_vertex.h" />
-    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\landmark_vertex_container.h" />
-    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\landmark_vertex.cc" />
-    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\landmark_vertex_container.cc" />
-    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\shot_vertex.h" />
-    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\shot_vertex_container.h" />
-    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\perspective_pose_opt_edge.h" />
-    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\perspective_reproj_edge.h" />
-    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\equirectangular_pose_opt_edge.h" />
-    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\se3\equirectangular_reproj_edge.h" />
-    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\shot_vertex.cc">
-      <ObjectFileName>$(IntDir)optimize\g2o\se3\shot_vertex.cc.obj</ObjectFileName>
-    </ClCompile>
-    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\shot_vertex_container.cc" />
-    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\perspective_pose_opt_edge.cc" />
-    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\perspective_reproj_edge.cc" />
-    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\equirectangular_pose_opt_edge.cc" />
-    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\se3\equirectangular_reproj_edge.cc" />
-    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\sim3\shot_vertex.h" />
-    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\sim3\graph_opt_edge.h" />
-    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\sim3\transform_vertex.h" />
-    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\sim3\backward_reproj_edge.h" />
-    <ClInclude Include="openvslam\src\openvslam\optimize\g2o\sim3\forward_reproj_edge.h" />
-    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\sim3\shot_vertex.cc">
-      <ObjectFileName>$(IntDir)optimize\g2o\sim3\shot_vertex.cc.obj</ObjectFileName>
-    </ClCompile>
-    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\sim3\graph_opt_edge.cc" />
-    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\sim3\transform_vertex.cc" />
-    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\sim3\backward_reproj_edge.cc" />
-    <ClCompile Include="openvslam\src\openvslam\optimize\g2o\sim3\forward_reproj_edge.cc" />
     <ClInclude Include="openvslam\src\openvslam\publish\frame_publisher.h" />
     <ClInclude Include="openvslam\src\openvslam\publish\map_publisher.h" />
     <ClCompile Include="openvslam\src\openvslam\publish\frame_publisher.cc" />
